@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "ruby_extensions"
-  s.version = "1.0.1"
+  s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Zachary Powell"]
@@ -20,9 +20,9 @@ Gem::Specification.new do |s|
     "LICENSE",
     "README.md",
     "lib/ruby_extensions.rb",
-    "lib/ruby_extensions/object.rb",
+    "lib/ruby_extensions/object_extensions.rb",
     "ruby_extensions.gemspec",
-    "spec/ruby_extensions/object_spec.rb",
+    "spec/ruby_extensions/object_extensions_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/babelian/ruby_extensions"

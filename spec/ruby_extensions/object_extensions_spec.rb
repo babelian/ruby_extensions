@@ -2,7 +2,49 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Object do
 
-  it "#filter_methods"
+  describe "#filtered_methods" do
+
+    let(:subject) { "string".filtered_methods }
+
+    context "on the Array class" do
+
+      let(:subject) { Array.filtered_methods }
+
+      it "includes Array class methods" do
+        is_expected.to include(:[])
+      end
+
+      it "does not include Object class methods" do
+        is_expected.to_not include(:superclass)
+      end
+
+    end
+
+    context "on a String instance" do
+
+      let(:subject) { "string".filtered_methods }
+
+      it "includes String methods" do
+        is_expected.to include(:strip)
+      end
+
+      it "does not include Object instance methods" do
+        is_expected.to_not include(:object_id)
+      end
+    end
+
+
+    it "sorts" do
+      is_expected.to eql subject.sort
+    end
+
+    it "filters via regexp" do
+      "string".filtered_methods(/^s/).each do |method|
+        expect(method).to_s =~ /^s/
+      end
+    end
+
+  end
 
   it "#html_safe"
 

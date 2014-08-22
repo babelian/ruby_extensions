@@ -1,3 +1,3 @@
-require 'ruby_extensions/object'
+require 'ruby_extensions/object_extensions'
 
-Object.send :include, RubyExtensions::Object
+Object.send :include, RubyExtensions::ObjectExtensions

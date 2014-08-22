@@ -4,7 +4,7 @@
 
 module RubyExtensions
 
-  module Object
+  module ObjectExtensions
 
     # View methods unique to object.
     # @param [Regexp] search filter them down
