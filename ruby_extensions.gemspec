@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "ruby_extensions"
-  s.version = "1.1.0"
+  s.version = "1.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Zachary Powell"]
-  s.date = "2014-08-14"
+  s.date = "2014-08-26"
   s.email = "zach@babelian.net"
   s.extra_rdoc_files = [
     "LICENSE",
@@ -29,5 +29,20 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = "2.0.14"
   s.summary = "Extensions for Ruby core classes"
+
+  if s.respond_to? :specification_version then
+    s.specification_version = 4
+
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<rspec>, ["= 3.0.0"])
+      s.add_runtime_dependency(%q<jeweler>, [">= 0"])
+    else
+      s.add_dependency(%q<rspec>, ["= 3.0.0"])
+      s.add_dependency(%q<jeweler>, [">= 0"])
+    end
+  else
+    s.add_dependency(%q<rspec>, ["= 3.0.0"])
+    s.add_dependency(%q<jeweler>, [">= 0"])
+  end
 end
 

@@ -1,3 +1,6 @@
 require 'ruby_extensions/object_extensions'
+require 'ruby_extensions/nil_class_extensions'
 
-Object.send :include, RubyExtensions::ObjectExtensions
+class Object
+  include RubyExtensions::ObjectExtensions
+end
