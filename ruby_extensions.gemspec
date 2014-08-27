@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Zachary Powell"]
-  s.date = "2014-08-26"
+  s.date = "2014-08-27"
   s.email = "zach@babelian.net"
   s.extra_rdoc_files = [
     "LICENSE",
@@ -40,8 +40,8 @@ Gem::Specification.new do |s|
     s.specification_version = 4
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<rspec>, ["= 3.0.0"])
-      s.add_runtime_dependency(%q<jeweler>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, ["= 3.0.0"])
+      s.add_development_dependency(%q<jeweler>, [">= 0"])
     else
       s.add_dependency(%q<rspec>, ["= 3.0.0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
