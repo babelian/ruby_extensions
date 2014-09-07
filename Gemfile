@@ -5,11 +5,10 @@ group :development, :test do
 end
 
 group :test do
-  if ENV['SHIPPABLE']
-    gem "ci_reporter"
-    gem "codeclimate-test-reporter"
-    gem 'minitest-reporters'
-    gem "rspec_junit_formatter"
-    gem 'simplecov-csv'
-  end
+  # codeclimate/shippable
+  gem "ci_reporter"
+  gem "codeclimate-test-reporter"
+  gem 'minitest-reporters'
+  gem "rspec_junit_formatter"
+  gem 'simplecov-csv'
 end
