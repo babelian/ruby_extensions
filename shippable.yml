@@ -2,12 +2,15 @@ language: ruby
 rvm:
   - 2.1.2
 env:
-  - CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
+  - SHIPPABLE=1
+  - CI_REPORTS=shippable/testresults 
+  - COVERAGE_REPORTS=shippable/codecoverage
+  - CODECLIMATE_REPO_TOKEN=777498466b16e0a5aab6758838834f67774f3b3d3bbe7c04b09b3d663974caec 
+notifications:
+  email:
+    - zach@babelian.net
 before_script:
   - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
 script:
-  - rspec spec/suite.rb > shippable/testresults/results.txt
-notifications:
- email:
-     recipients:
-         - zach@babelian.net
+  - rspec --format RspecJunitFormatter --out shippable/testresults/results.xml spec/suite.rb 
