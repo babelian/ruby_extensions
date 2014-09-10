@@ -48,22 +48,18 @@ module RubyExtensions
       !nil?
     end
 
-    # like blank? but doesn't return true if FalseClass
-    # do not use unless the param could plausibly be FalseClass
-    def nil_or_empty?
-      if respond_to?('empty?')
-        empty?
+    def nil_if_empty
+      if respond_to?(:empty?) && empty?
+        nil
+      elsif to_s == ''
+        nil
       else
-        nil?
+        self
       end
     end
 
-    def nil_if_empty
-      to_s == '' ? nil : self
-    end
-
     def not_blank?
-      !blank?
+      present?
     end
 
     def not_empty?

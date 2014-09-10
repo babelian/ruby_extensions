@@ -95,11 +95,16 @@ describe Object do
 
   end
 
-  it "#not_nil?"
+  it "#not_nil?" do
+    expect(1.not_nil?).to eql(true)
+    expect(nil.not_nil?).to eql(false)
+  end
 
-  it "#nil_or_empty?"
-
-  it "#nil_if_empty"
+  it "#nil_if_empty" do
+    expect(''.nil_if_empty).to be_nil
+    expect([].nil_if_empty).to be_nil
+    expect(1.nil_if_empty).to eql(1)
+  end
 
   it "#not_blank?"
 
@@ -120,6 +125,7 @@ describe Object do
   describe "#send_unless_nil" do
 
     it "does not send when nil" do
+      allow_message_expectations_on_nil
       subject = nil
       expect(subject).to receive(:inspect).never
       subject.send_unless_nil(:inspect)

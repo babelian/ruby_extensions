@@ -2,10 +2,7 @@ language: ruby
 rvm:
   - 2.1.2
 env:
-  - SHIPPABLE=1
-  - CI_REPORTS=shippable/testresults
-  - COVERAGE_REPORTS=shippable/codecoverage
-  - CODECLIMATE_REPO_TOKEN=777498466b16e0a5aab6758838834f67774f3b3d3bbe7c04b09b3d663974caec
+  - SHIPPABLE=1 CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage CODECLIMATE_REPO_TOKEN=777498466b16e0a5aab6758838834f67774f3b3d3bbe7c04b09b3d663974caec
 notifications:
   email:
     - zach@babelian.net
