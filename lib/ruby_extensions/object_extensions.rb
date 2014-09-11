@@ -1,9 +1,7 @@
-#
-# Object
-#
-
+# Gem Namespace
 module RubyExtensions
 
+  # Helpful extensions for {Object}
   # @example
   #   class Object
   #     include RubyExtensions::ObjectExtensions
