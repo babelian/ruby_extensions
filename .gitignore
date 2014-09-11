@@ -1,2 +1,4 @@
 coverage/
 shippable/
+doc/
+.yardoc
