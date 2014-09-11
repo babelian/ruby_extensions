@@ -4,6 +4,11 @@
 
 module RubyExtensions
 
+  # @example
+  #   class Object
+  #     include RubyExtensions::ObjectExtensions
+  #   end
+
   module ObjectExtensions
 
     # View methods unique to object.

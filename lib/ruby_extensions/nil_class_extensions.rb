@@ -6,6 +6,8 @@
 class NilClass
 
   # Add params to nil.to_s so that Rails style something.updated_at.to_s(:db) does not fail if the timestamp is nil
+  # @param args to be ignored
+  # @returns [String] that is blank
   def to_s(*args)
     ''
   end
