@@ -27,6 +27,9 @@ module RubyExtensions
     # console use only
     alias_method :fm, :filtered_methods
 
+    # Allows calling Rail's html_safe on an Array
+    # @deprecated this only worked well in 1.8.7 array.to_s matched array.join('')
+    # @return [String] that is html_safe
     def html_safe
       to_s.html_safe
     end
