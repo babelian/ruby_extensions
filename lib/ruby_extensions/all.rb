@@ -1,7 +1,14 @@
+require 'ruby_extensions/constant_reader_extension'
 require 'ruby_extensions/object_extensions'
 require 'ruby_extensions/hash_extensions'
 require 'ruby_extensions/nil_class_extensions'
 require 'ruby_extensions/rails_environment_extensions'
+
+
+# @private
+class Class
+  include RubyExtensions::ConstantReaderExtension
+end
 
 # @private
 class Object
