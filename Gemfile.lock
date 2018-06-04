@@ -43,6 +43,7 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
+    money (2.1.3)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
@@ -92,6 +93,10 @@ DEPENDENCIES
   codeclimate-test-reporter
   jeweler
   minitest-reporters
+  money (= 2.1.3)
   rspec (= 3.0.0)
   rspec_junit_formatter
   simplecov-csv
+
+BUNDLED WITH
+   1.14.6
