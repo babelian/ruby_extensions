@@ -9,4 +9,4 @@ Method Extensions on Ruby classes
 
 [![Inline docs](http://inch-ci.org/github/babelian/ruby_extensions.png?branch=master)](http://inch-ci.org/github/babelian/ruby_extensions)
 
-[![Build Status](https://api.shippable.com/projects/540e7a343479c5ea8f9eb177/badge?branchName=master)](https://app.shippable.com/projects/540e7a343479c5ea8f9eb177/builds/latest)
+[![Build Status](https://semaphoreci.com/api/v1/babelian/ruby_extensions/branches/master/badge.svg)](https://semaphoreci.com/babelian/ruby_extensions)
