@@ -1,7 +1,13 @@
 FROM ruby:2.5.3-alpine
 
-# For Nokogiri
-RUN apk add --update ruby-dev build-base
+RUN apk add --update \
+    build-base \
+    ruby-dev \
+    bash \
+    git \
+    less \
+    nano
+
 
 #
 # Gems
