@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 
+source 'https://rubygems.org'
+
 group :development, :test do
-  gem 'jeweler', '2.3.9'
+  gem 'bump'
   gem 'money', '2.1.3', require: false
-  gem 'rspec', '3.0.0'
+  gem 'rspec', '3.8.0'
 end
 
 group :test do

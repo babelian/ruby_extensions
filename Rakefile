@@ -1,45 +1,19 @@
 require 'rake'
 
-module TempFixForRakeLastComment
-  def last_comment
-    last_description
-  end
-end
-Rake::Application.send :include, TempFixForRakeLastComment
+# module TempFixForRakeLastComment
+#   def last_comment
+#     last_description
+#   end
+# end
+# Rake::Application.send :include, TempFixForRakeLastComment
 
-begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |gem|
-    gem.name = "ruby_extensions"
-    gem.summary = "Extensions for Ruby core classes"
-    gem.email = "zach@babelian.net"
-    gem.homepage = "http://github.com/babelian/ruby_extensions"
-    gem.authors = [ "Zachary Powell" ]
-  end
-rescue LoadError
-  puts "Jeweler not available. Install it with: gem install jeweler"
-end
-
-require 'rdoc/task'
-
-Rake::RDocTask.new do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = 'ruby_exensions'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end
-
+require 'rubygems'
 require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new(:spec) do |spec|
-  spec.pattern = FileList['spec/**/*_spec.rb']
+require 'bump'
+
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.pattern = Dir.glob('spec/**/*_spec.rb')
+  t.rspec_opts = '--format documentation --require spec_helper.rb'
 end
 
-RSpec::Core::RakeTask.new(:rcov) do |spec|
-  spec.libs << 'lib' << 'spec'
-  spec.pattern = 'spec/**/*_spec.rb'
-  spec.rcov = true
-end
-
-
-task :default => :spec
+task default: :spec

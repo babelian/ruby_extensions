@@ -1,43 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.4.0)
     ansi (1.4.3)
     builder (3.2.2)
+    bump (0.8.0)
     ci_reporter (2.0.0)
       builder (>= 2.1.2)
     codeclimate-test-reporter (0.4.0)
       simplecov (>= 0.7.1, < 1.0.0)
-    descendants_tracker (0.0.4)
-      thread_safe (~> 0.3, >= 0.3.1)
-    diff-lcs (1.2.5)
+    diff-lcs (1.3)
     docile (1.1.5)
-    faraday (0.9.2)
-      multipart-post (>= 1.2, < 3)
-    git (1.4.0)
-    github_api (0.16.0)
-      addressable (~> 2.4.0)
-      descendants_tracker (~> 0.0.4)
-      faraday (~> 0.8, < 0.10)
-      hashie (>= 3.4)
-      mime-types (>= 1.16, < 3.0)
-      oauth2 (~> 1.0)
-    hashie (3.5.7)
-    highline (1.7.10)
-    jeweler (2.3.9)
-      builder
-      bundler
-      git (>= 1.2.5)
-      github_api (~> 0.16.0)
-      highline (>= 1.6.15)
-      nokogiri (>= 1.5.10)
-      psych
-      rake
-      rdoc
-      semver2
-    jwt (1.5.6)
-    mime-types (2.99.3)
-    mini_portile2 (2.3.0)
     minitest (5.4.1)
     minitest-reporters (1.0.5)
       ansi
@@ -46,38 +18,24 @@ GEM
       ruby-progressbar
     money (2.1.3)
     multi_json (1.10.1)
-    multi_xml (0.6.0)
-    multipart-post (2.0.0)
-    nokogiri (1.8.2)
-      mini_portile2 (~> 2.3.0)
-    oauth2 (1.4.0)
-      faraday (>= 0.8, < 0.13)
-      jwt (~> 1.0)
-      multi_json (~> 1.3)
-      multi_xml (~> 0.5)
-      rack (>= 1.2, < 3)
-    psych (3.0.2)
-    rack (2.0.5)
-    rake (10.5.0)
-    rdoc (6.0.4)
-    rspec (3.0.0)
-      rspec-core (~> 3.0.0)
-      rspec-expectations (~> 3.0.0)
-      rspec-mocks (~> 3.0.0)
-    rspec-core (3.0.4)
-      rspec-support (~> 3.0.0)
-    rspec-expectations (3.0.4)
+    rspec (3.8.0)
+      rspec-core (~> 3.8.0)
+      rspec-expectations (~> 3.8.0)
+      rspec-mocks (~> 3.8.0)
+    rspec-core (3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-expectations (3.8.3)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.0.0)
-    rspec-mocks (3.0.4)
-      rspec-support (~> 3.0.0)
-    rspec-support (3.0.4)
+      rspec-support (~> 3.8.0)
+    rspec-mocks (3.8.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.0)
     rspec_junit_formatter (0.2.0)
       builder (< 4)
       rspec (>= 2, < 4)
       rspec-core (!= 2.12.0)
     ruby-progressbar (1.5.1)
-    semver2 (3.4.2)
     simplecov (0.9.0)
       docile (~> 1.1.0)
       multi_json
@@ -85,20 +43,19 @@ GEM
     simplecov-csv (0.1.3)
       simplecov
     simplecov-html (0.8.0)
-    thread_safe (0.3.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bump
   ci_reporter
   codeclimate-test-reporter
-  jeweler (= 2.3.9)
   minitest-reporters
   money (= 2.1.3)
-  rspec (= 3.0.0)
+  rspec (= 3.8.0)
   rspec_junit_formatter
   simplecov-csv
 
 BUNDLED WITH
-   1.14.6
+   1.17.3
