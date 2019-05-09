@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
-source 'https://rubygems.org'
-
 group :development, :test do
-  gem 'bump'
   gem 'money', '2.1.3', require: false
   gem 'rspec', '3.8.0'
 end
