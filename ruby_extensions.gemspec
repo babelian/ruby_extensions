@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'ruby_extensions'
-  s.version = '1.12.1'
+  s.version = '1.12.2'
 
   s.authors = 'Zachary Powell'
   s.email = 'zach@babelian.net'
