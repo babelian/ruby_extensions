@@ -1,0 +1,31 @@
+language: generic
+
+services:
+  - docker
+
+env:
+  global:
+    - DOCKER_COMPOSE_VERSION=1.24.1
+    - CC_TEST_REPORTER_ID=777498466b16e0a5aab6758838834f67774f3b3d3bbe7c04b09b3d663974caec
+
+before_install:
+  # install docker-compose
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+
+  # code-climate
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+install: skip
+
+before_script:
+  - docker-compose build
+script:
+  - docker-compose run app bundle exec rake spec
+after_script:
+  # code-climate
+  - docker-compose run -e TRAVIS_BRANCH -e TRAVIS_COMMIT -e CC_TEST_REPORTER_ID app ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
