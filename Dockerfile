@@ -11,6 +11,5 @@ WORKDIR /app
 COPY Gemfile Gemfile.lock *.gemspec /app/
 RUN bundle install
 
-COPY . /app
-
-CMD rake spec
+# COPY . /app
+# CMD rake spec
