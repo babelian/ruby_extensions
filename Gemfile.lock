@@ -10,7 +10,7 @@ GEM
     docile (1.3.2)
     json (2.2.0)
     money (2.1.3)
-    rake (12.3.2)
+    rake (13.0.1)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
@@ -35,7 +35,7 @@ PLATFORMS
 
 DEPENDENCIES
   money (= 2.1.3)
-  rake (= 12.3.2)
+  rake (= 13.0.1)
   rspec (= 3.8.0)
   ruby_extensions!
   simplecov (= 0.16.1)
